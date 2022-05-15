@@ -1,13 +1,19 @@
 <div class="container">
   <div class="advice-box">
-    <h4>Advice #{{ advices.id }}</h4>
-    <h1>"{{ advices.advice }}"</h1>
+    <div class="box-header">
+      <h4>Advice #{{ advices.id }}</h4>
+    </div>
+    <div class="box-body">
+      <h1><sup><i class="fas fa-quote-left"></i></sup> {{ advices.advice }} <sup><i class="fas fa-quote-right"></i></sup></h1>
+    </div>
     <div class="img">
       <picture>
-        <source media="(max-width:675px)" srcset="../assets/images/pattern-divider-mobile.svg">
-        <img src="../assets/images/pattern-divider-desktop.svg" alt="divider">
-      </picture>
+        <source media="(max-width:650px)" srcset="../assets/images/pattern-divider-mobile.svg">
+        <img src="../assets/images/pattern-divider-desktop.svg" alt="">
+      </picture>     
+    </div>  
+    <div class="box-footer">
+      <button (click)="fetchAdvice()"><img src="../assets/images/icon-dice.svg" alt="dice"></button>
     </div>
-    <button (click)="fetchAdvice()"><img src="../assets/images/icon-dice.svg" alt="dice"></button>
   </div>
 </div>

@@ -8,7 +8,7 @@ export class AdviceService{
 
   constructor(private http:HttpClient){}
 
-  advices:any;
+  advices:any = { "id": 36, "advice": "If you think nobody cares if you're alive, try missing a few payments."};
 
   fetchAdvice():any{
     this.http.get<any>('https://api.adviceslip.com/advice').subscribe({
